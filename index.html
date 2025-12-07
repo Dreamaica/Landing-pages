@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Empress Zaria</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Montserrat:wght@400;500;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Spline Viewer Script -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.59/build/spline-viewer.js"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              gold: {
+                DEFAULT: '#C6A645',
+                light: '#E5C565',
+                dark: '#8A7330',
+              },
+              earth: {
+                dark: '#0D0D0C',
+                brown: '#3A2C21',
+              },
+              forest: {
+                DEFAULT: '#1B281B',
+                green: '#0F5B33',
+              },
+              rasta: {
+                red: '#A1262A',
+                gold: '#C6A645',
+                green: '#0F5B33',
+              }
+            },
+            fontFamily: {
+              serif: ['"Bodoni Moda"', 'serif'],
+              sans: ['"Poppins"', 'sans-serif'],
+              heading: ['"Montserrat"', 'sans-serif'],
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'float-slow': 'float 8s ease-in-out infinite',
+              'dust': 'dust 20s linear infinite',
+              'pulse-glow': 'pulse-glow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'spin-slow': 'spin 4s linear infinite',
+              'shimmer': 'shimmer 2.5s linear infinite',
+              'note-float': 'noteFloat 10s linear infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              dust: {
+                '0%': { transform: 'translateY(0) translateX(0)' },
+                '100%': { transform: 'translateY(-100px) translateX(20px)' },
+              },
+              'pulse-glow': {
+                '0%, 100%': { opacity: '1', boxShadow: '0 0 10px #C6A645' },
+                '50%': { opacity: '.8', boxShadow: '0 0 25px rgba(198, 166, 69, 0.6)' },
+              },
+              shimmer: {
+                '0%': { backgroundPosition: '200% 0' },
+                '100%': { backgroundPosition: '-200% 0' }
+              },
+              noteFloat: {
+                '0%': { transform: 'translateY(110vh) rotate(0deg)', opacity: '0' },
+                '10%': { opacity: '0.6' },
+                '90%': { opacity: '0.6' },
+                '100%': { transform: 'translateY(-10vh) rotate(360deg)', opacity: '0' }
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom scrollbar for a premium feel */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0D0D0C;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #3A2C21;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #C6A645;
+      }
+      
+      .mask-gradient-b {
+        mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+      }
+
+      /* Hide Spline Logo if possible via CSS (Best effort) */
+      spline-viewer::shadow #logo {
+        display: none !important;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.25"
+  }
+}
+</script>
+</head>
+  <body class="bg-earth-dark text-white overflow-x-hidden antialiased">
+    <div id="root"></div>
+  </body>
+</html>
