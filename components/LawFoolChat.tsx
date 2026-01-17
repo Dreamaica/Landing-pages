@@ -11,7 +11,7 @@ const LawFoolChat: React.FC = () => {
   const API_KEY = "AIzaSyDWEgH_unpe4v3BtUUzSGCWvJ4VXN3spFc";
   
   // 🧠 YOUR CACHE ID (The Brain we just built!)
-  const CACHE_NAME = "cachedContents/g1uzvt13nltc8zh4p4w8nbtdcpewc8ndg8c64a1d";
+  const CACHE_NAME = "cachedContents/lm1zkuasssj2x86hkmng9z5s6qondrna0itol8jy";
 
   const askLawFool = async () => {
     if (!query) return;
