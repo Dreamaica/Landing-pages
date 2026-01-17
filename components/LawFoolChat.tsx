@@ -8,7 +8,7 @@ const LawFoolChat: React.FC = () => {
 
   // ⚠️ PASTE YOUR API KEY HERE FOR TESTING
   // (Later we will move this to a secure environment variable)
-  const API_KEY = "YOUR_PASTE_API_KEY_HERE";
+  const API_KEY = "AIzaSyDWEgH_unpe4v3BtUUzSGCWvJ4VXN3spFc";
   
   // 🧠 YOUR CACHE ID (The Brain we just built!)
   const CACHE_NAME = "cachedContents/jjjn0x8o3xhk6cczjfy7zkvawa79uqq5fi3nrqa0";
