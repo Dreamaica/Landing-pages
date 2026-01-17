@@ -23,7 +23,7 @@ const LawFoolChat: React.FC = () => {
       
       // We explicitly tell it to use the "Brain" we built
       const model = genAI.getGenerativeModel({
-        model: "gemini-1.5-flash-001",
+        model: "gemini-2.5-flash",
         cachedContent: CACHE_NAME, 
       });
 
