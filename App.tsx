@@ -7,7 +7,7 @@ import { Footer } from './components/Footer';
 import { TrenchTown } from './components/TrenchTown';
 import { MetaVersity } from './components/MetaVersity';
 import { BudAndBreakfast } from './components/BudAndBreakfast';
-
+import LawFoolChat from './components/LawFoolChat';
 const App: React.FC = () => {
   return (
     <main className="relative min-h-screen w-full overflow-hidden bg-earth-dark">
@@ -31,7 +31,8 @@ const App: React.FC = () => {
       
       {/* Shop Section */}
       <Shop />
-      
+      {/* LawFool Intelligence Engine */}
+<LawFoolChat />
       {/* Footer / Connect Section */}
       <Footer />
     </main>
