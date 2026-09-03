@@ -1,0 +1,43 @@
+name: Quality and secret gate
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: quality-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Reject common committed secrets
+        shell: bash
+        run: |
+          set -euo pipefail
+          if grep -RInE             --exclude-dir=.git             --exclude-dir=node_modules             --exclude-dir=dist             'AIza[0-9A-Za-z_-]{30,}|(ghp|github_pat)_[0-9A-Za-z_]+' .; then
+            echo "Potential credential found. Move secrets to a protected server environment."
+            exit 1
+          fi
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Build
+        run: npm run build
