@@ -14,4 +14,4 @@ Do not post credentials, personal data, or exploit details in a public issue. Us
 
 ## Supported version
 
-Security fixes target the current `main` branch while this project remains an active prototype.
+Security fixes target the current `main` branch while this project remains active.
