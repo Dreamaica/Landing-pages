@@ -1,20 +1,58 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Empress Zaria — Sovereign Wisdom
 
-# Run and deploy your AI Studio app
+A culturally anchored digital platform for Empress Zaria, developed by **Dream Makers**.
 
-This contains everything you need to run your app locally.
+This repository powers a premium React experience connecting cultural education, heritage storytelling, commerce, tours, community initiatives, and the evolving Empress Zaria ecosystem.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1v1UCdIPQ2jEXlKg_pJhUPpQyoEpjS4zb
+## What this project contains
 
-## Run Locally
+- Sovereign Wisdom landing experience
+- Cultural and heritage storytelling
+- Haile Selassie I / Empress Menen educational context
+- Trenchtown and Jamaica-facing initiatives
+- Shop and product discovery experiences
+- Tour and hospitality presentation
+- Responsive motion-led interface
 
-**Prerequisites:**  Node.js
+## Technology
 
+- React 19
+- TypeScript
+- Vite
+- Framer Motion
+- Lucide React
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Local development
+
+**Prerequisite:** Node.js
+
+```bash
+npm install
+npm run dev
+```
+
+Production build:
+
+```bash
+npm run build
+```
+
+Preview the production build:
+
+```bash
+npm run preview
+```
+
+## Design direction
+
+The interface is intentionally built around strong visual hierarchy, cultural integrity, cinematic presentation, responsive typography, restrained motion, and premium editorial composition.
+
+This is not a generic landing-page template. It is a living platform designed to expand as programs, partnerships, products, events, media, and community initiatives mature.
+
+## Operating principle
+
+**Preserve the story. Strengthen the system. Expand without flattening the culture.**
+
+---
+
+Built and stewarded by **Dream Makers**.
