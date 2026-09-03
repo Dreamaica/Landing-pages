@@ -24,7 +24,7 @@ This repository powers a premium React experience connecting cultural education,
 
 ## Local development
 
-**Prerequisite:** Node.js
+**Prerequisite:** Node.js 22 or later
 
 ```bash
 npm install
@@ -43,11 +43,21 @@ Preview the production build:
 npm run preview
 ```
 
+## Security boundary
+
+Browser code is public code. Never place API keys, access tokens, private datasets, cached-content identifiers, customer information, or privileged model calls in React components, Vite configuration, or committed environment files.
+
+LawFool sends questions to `POST /api/lawfool`. Its server-side implementation must protect provider credentials, validate and rate-limit requests, and avoid retaining sensitive questions by default. See [SECURITY.md](SECURITY.md).
+
 ## Design direction
 
 The interface is intentionally built around strong visual hierarchy, cultural integrity, cinematic presentation, responsive typography, restrained motion, and premium editorial composition.
 
 This is not a generic landing-page template. It is a living platform designed to expand as programs, partnerships, products, events, media, and community initiatives mature.
+
+## Agent-assisted work
+
+Read [AGENTS.md](AGENTS.md) before agent-assisted edits. Start with the owner’s real ideas, prove one small workflow, verify it, and only then decide whether to keep it as internal leverage or develop it into a product.
 
 ## Operating principle
 
